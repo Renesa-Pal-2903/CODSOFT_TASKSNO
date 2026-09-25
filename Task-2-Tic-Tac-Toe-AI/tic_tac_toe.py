@@ -3,18 +3,14 @@
 
 import math
 
-
 # Display the board
 def print_board(board):
     print()
     print("-------------")
 
     for i in range(3):
-        print(
-            f"| {board[i][0]} | {board[i][1]} | {board[i][2]} |"
-        )
+        print(f"| {board[i][0]} | {board[i][1]} | {board[i][2]} |")
         print("-------------")
-
 
 # Check whether a player has won
 def check_winner(board, player):
@@ -46,11 +42,9 @@ def check_winner(board, player):
 
     return False
 
-
 # Check whether the board is full
 def is_board_full(board):
     return all(cell != " " for row in board for cell in row)
-
 
 # Minimax algorithm
 def minimax(board, depth, is_maximizing):
@@ -102,7 +96,6 @@ def minimax(board, depth, is_maximizing):
 
         return best_score
 
-
 # Find the best move for the AI
 def find_best_move(board):
     best_score = -math.inf
@@ -123,7 +116,6 @@ def find_best_move(board):
                     best_move = (row, col)
 
     return best_move
-
 
 # Get a valid move from the player
 def get_player_move(board):
@@ -212,7 +204,6 @@ def play_game():
             print("\nIt's a draw!")
             return
 
-
 # Main program
 def main():
     while True:
@@ -233,7 +224,6 @@ def main():
 
             else:
                 print("Please enter yes or no.")
-
 
 # Start the program
 if __name__ == "__main__":
