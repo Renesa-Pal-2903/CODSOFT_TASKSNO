@@ -1,150 +1,121 @@
-# Tic-Tac-Toe AI
+# 🤖 CodBot - Rule-Based Chatbot
 
-A Python-based console Tic-Tac-Toe game developed using the **Minimax algorithm** as part of Task 2 of the **CodSoft Artificial Intelligence Internship**.
+A simple rule-based chatbot developed in Python as **Task 1 of the CodSoft Artificial Intelligence Internship**.
 
 ## 📌 Project Overview
 
-This project is an interactive Tic-Tac-Toe game where a human player competes against an AI opponent.
+CodBot is a console-based chatbot that interacts with users through predefined rules and pattern matching. It accepts user input, identifies common queries and provides appropriate responses.
 
-The player uses **X**, while the AI uses **O**. The AI uses the **Minimax algorithm** to evaluate possible moves and select the best available move.
-
-The project demonstrates the use of **game-playing algorithms, recursion, decision-making, and search techniques** in Artificial Intelligence.
+The project demonstrates the basic concepts of conversational flow and rule-based natural language processing.
 
 ## ✨ Features
 
-* Human vs AI gameplay
-* AI decision-making using the Minimax algorithm
-* 3 × 3 Tic-Tac-Toe board
-* Win detection for both player and AI
-* Draw detection
-* Input validation
-* Prevention of moves on occupied positions
-* Handling of invalid inputs
-* Replay-ready game structure
-* Replay option after each game
-* Clear console-based interface
-
-## 🧠 Minimax Algorithm
-
-The **Minimax algorithm** is a decision-making algorithm commonly used in two-player games.
-
-In this project:
-
-* The AI (`O`) acts as the **maximizing player**.
-* The human player (`X`) acts as the **minimizing player**.
-* The algorithm explores possible future moves.
-* Each possible game state receives a score.
-* The AI selects the move with the highest possible score while assuming that the opponent will make the best possible counter-move.
-
-### Scoring
-
-```text
-AI Win     → Positive score
-Human Win  → Negative score
-Draw       → 0
-```
-
-The algorithm also considers the depth of the game state so that the AI prefers faster wins and delays losses when possible.
+* 👋 Responds to greetings
+* 👤 Takes and remembers the user's name during the conversation
+* 🤖 Introduces itself
+* 💬 Handles basic conversational queries
+* 📅 Displays the current date
+* 🕐 Displays the current time
+* 🐍 Provides basic information about Python
+* 💼 Provides information about the CodSoft internship
+* ❤️ Handles simple positive interactions
+* 🙏 Responds to thank-you messages
+* ❓ Handles unknown inputs
+* 👋 Allows the user to exit the conversation
 
 ## 🛠️ Technologies Used
 
 * **Python 3**
-* `math` module
-* Functions
+* `datetime` module
 * Conditional statements
 * Loops
-* Recursion
-* Lists
-* Minimax algorithm
-* Console input/output
+* String handling
+* Functions
+* Pattern matching
 
-## ⚙️ How It Works
+## 🧠 How It Works
 
-1. The game initializes an empty 3 × 3 board.
-2. The player is assigned `X`.
-3. The AI is assigned `O`.
-4. The player selects a position from 1 to 9.
-5. The AI evaluates the available moves using Minimax.
-6. The best move is selected by the AI.
-7. The board is updated after each move.
-8. The game checks for a win or draw after every move.
-9. The game ends when either player wins or the board becomes full.
-10. After the game ends, the player can choose to play another round or exit.
+The chatbot uses predefined rules implemented with `if`, `elif` and `else` statements.
 
-## ▶️ How to Run
+The user's input is first converted to lowercase and common punctuation marks are removed. The chatbot then checks the input against predefined keywords and phrases.
 
-### 1. Open the project folder
+Common acknowledgements such as "ok", "okay", "alright" and "sure" are recognized and receive predefined responses.
 
-```text
-Task-2-Tic-Tac-Toe-AI
-```
+For example:
 
-### 2. Open the terminal
+* Greetings → greeting response
+* `"your name"` → chatbot introduces itself
+* `"date"` → displays the current date
+* `"time"` → displays the current time
+* `"python"` → provides basic Python information
+* `"bye"` → ends the conversation
+* Unknown input → displays a default response
 
-Make sure the terminal is inside the project folder.
-
-### 3. Run the program
-
-```bash
-python tic_tac_toe.py
-```
-
-## 🎮 Board Positions
-
-The player selects positions using the following layout:
+## 📂 Project Structure
 
 ```text
- 1 | 2 | 3
------------
- 4 | 5 | 6
------------
- 7 | 8 | 9
-```
-
-For example, entering `1` places `X` in the top-left position.
-
-## 📷 Sample Gameplay
-
-```text
-=============================================
-        TIC-TAC-TOE AI
-=============================================
-You are X
-AI is O
-
-Board positions:
-
- 1 | 2 | 3
------------
- 4 | 5 | 6
------------
- 7 | 8 | 9
-
-Your turn (X).
-Enter your position (1-9): 1
-
-AI is thinking...
-```
-
-The game continues until the player wins, the AI wins, or the match ends in a draw.
-
-## 📁 Project Structure
-
-```text
-Task-2-Tic-Tac-Toe-AI
+Task-1-Rule-Based-Chatbot/
 │
-├── tic_tac_toe.py
+├── chatbot.py
 └── README.md
 ```
 
-## 🎯 Learning Outcome
+## ▶️ How to Run
 
-Through this project, I learned how to implement a game-playing AI using the **Minimax algorithm** and gained practical understanding of recursion, game-state evaluation, decision-making, and search techniques in Artificial Intelligence.
+### 1. Clone the repository
 
-## 🏆 Internship Task
+```bash
+git clone <your-github-repository-link>
+```
 
-**Task:** Task 2 – Tic-Tac-Toe AI
-**Program:** CodSoft Artificial Intelligence Internship
+### 2. Navigate to the project folder
+
+```bash
+cd Task-1-Rule-Based-Chatbot
+```
+
+### 3. Run the chatbot
+
+```bash
+python chatbot.py
+```
+
+## 💻 Sample Interaction
+
+```text
+=======================================================
+             WELCOME TO CODBOT
+=======================================================
+Hello! I am CodBot, a simple rule-based chatbot.
+I can respond to greetings, basic questions and more.
+Type 'bye', 'exit' or 'quit' whenever you want to leave.
+
+CodBot: What is your name?
+You: Diya
+
+CodBot: Nice to meet you, Diya! 😊
+
+CodBot: How can I help you today, Diya?
+Diya: Hello!
+CodBot: Hello! 😊 How can I help you?
+
+Diya: What is the time?
+CodBot: The current time is 10:30 PM.
+
+Diya: What is Python?
+CodBot: Python is a popular programming language used in AI, machine learning, automation and web development.
+
+Diya: Bye
+CodBot: Goodbye, Diya! It was nice talking to you. 👋
+```
+
+## 🎯 Internship Task
+
+**Internship:** CodSoft Artificial Intelligence Internship
+
+**Task:** Task 1 - Chatbot with Rule-Based Responses
+
+The project follows the task requirement of creating a chatbot that responds to user inputs using predefined rules and `if-else`/pattern-matching techniques.
 
 ## 👩‍💻 Author
 
